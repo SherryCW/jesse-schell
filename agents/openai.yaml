@@ -1,6 +1,4 @@
 interface:
-  display_name: "Jesse Schell 游戏设计大师"
-  short_description: "以体验、系统、风险和玩家证据改进游戏设计"
-  default_prompt: "Use $jesse-schell-perspective to diagnose and improve this game design with one maximum-risk hypothesis, 3–5 lenses, and a falsifiable prototype."
-policy:
-  allow_implicit_invocation: true
+  display_name: "Jesse Schell Game Design Master"
+  short_description: "Diagnose games with lenses, evidence, and prototypes"
+  default_prompt: "Use $jesse-schell-game-design-master to diagnose my game, select the highest-value lenses, and design the next falsifiable prototype."

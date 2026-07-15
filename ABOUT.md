@@ -1,52 +1,33 @@
-# About this skill
+# About
 
-## 它是什么
+## Synthesis
 
-这是一个“大师级游戏设计”执行器：不是模仿某个人的私人声音，而是把 Jesse Schell 的公开游戏设计框架、透镜式提问和《游戏设计艺术》第 3 版的方法论，压缩成一套能在具体项目中运行的判断流程。
+This repository combines two complementary designs:
 
-它的“大师级”不意味着输出更多术语，而意味着能够在体验、玩家、系统、生产、商业和责任之间做取舍，并把取舍转成可失败、可观察、可撤回的下一步。
+- a complete, source-located knowledge base covering 35 chapters and 112 numbered lenses from the Chinese third edition of *The Art of Game Design*;
+- a risk-first execution protocol that selects only lenses capable of changing a prototype, observation threshold, safety guardrail, or continue/stop decision.
 
-## 为什么要合并两个 skill
+## What the master version adds
 
-原 `jesse-schell-perspective` 的优势是收敛能力：先锁定体验问题和唯一最大风险，只选 3–5 个 lenses，再用最小原型和行为证据作决定。
+1. Project-stage routing from concept through live operations and redesign.
+2. E0–E4 evidence grades and explicit confidence.
+3. A scored lens-selection portfolio across experience, system, and evidence layers.
+4. Conflict resolution across safety, experience, evidence, coherence, viability, and preference.
+5. Separate validation horizons for first, third, and thirtieth sessions.
+6. Reusable artifacts for prototypes, playtests, economy, governance, responsibility, and decision logging.
+7. Progressive disclosure: the core protocol stays in `SKILL.md`; detailed chapters and lenses load only when relevant.
 
-《游戏设计艺术》第 3 版蒸馏出的 26 个方法则提供完整覆盖：场景、玩家模型、动机、机制、平衡、谜题、界面、节奏、叙事、角色、临场感、社群、技术、客户、商业和责任。
+## Validation record
 
-合并版保留前者的优先级纪律，把后者变成按需路由的方法簇，避免把 26 个方法拼成清单或固定评分表。
+- Skill frontmatter and naming validated with Codex `quick_validate.py`.
+- 35 chapter reference files present.
+- 112 lens numbers indexed, with the third edition's two distinct lens-93 entries preserved.
+- All links from `SKILL.md` resolve.
+- No empty bundled files.
 
-## 工作流
+## Maintenance rules
 
-```text
-深度倾听
-    ↓
-本质体验与场景
-    ↓
-机制 / 故事 / 美学 / 技术
-    ↓
-玩家行为与系统风险
-    ↓
-最小原型与六问试玩
-    ↓
-技术 / 客户 / 商业 / 社群 / 责任
-    ↓
-继续、修改、替代或停止
-```
-
-## 质量记录
-
-- 26 个原子方法经过 RIA++ 蒸馏、案例与反例审计。
-- 52 条技能关系，0 个孤立节点。
-- 156 条盲测用例，总体通过率 146/156（93.6%）。
-- 不应触发诱饵通过率 52/52（100%）。
-- 合并主 skill 通过 frontmatter、触发边界、测试清单和占位符扫描。
-
-## 诚实边界
-
-这不是 Jesse Schell 本人的意见，也不复制其私人经验或创造力。它是一套有边界的实践启发式；当问题依赖当前版本、真实玩家反应、平台规则、法律、健康、安全、隐私、未成年人或 AI 版权时，必须补充当代一手资料和专业判断。
-
-## 维护原则
-
-1. 新增方法必须能改变原型、观测指标或继续/停止决策。
-2. 每个触发器都要有明确“不适用”边界，避免所有游戏问题都调用本 skill。
-3. 优先添加反例、失败模式和证据等级，而不是增加金句或术语。
-4. 每次重大更新后重新运行 `test-prompts.json`，并记录实际误路由。
+- Add a method only when it can alter a decision, artifact, observation, threshold, or stop condition.
+- Keep facts, interpretations, counterevidence, decisions, and unknowns separate.
+- Prefer behavioral thresholds to attitudinal claims.
+- Update tests after any change to routing, evidence grades, output contract, or boundaries.

@@ -1,14 +1,43 @@
 {
-  "skill": "jesse-schell-perspective",
-  "version": "1.0.0",
+  "skill": "jesse-schell-game-design-master",
+  "version": "2.0.0",
   "test_cases": [
-    {"id":"should-trigger-01","type":"should_trigger","prompt":"我们的游戏功能很多，但玩家说不出为什么值得玩；请先找核心体验和最大风险。","expected_behavior":"锁定本质体验与唯一最大风险，选择少量 lenses，并提出最小原型。"},
-    {"id":"should-trigger-02","type":"should_trigger","prompt":"VR项目已经做了半年，玩家会晕，团队还想继续加真实贴图；请按体验、媒介和风险诊断。","expected_behavior":"优先处理存在感/舒适度与技术风险，提出可失败实验和停止线。"},
-    {"id":"should-trigger-03","type":"should_trigger","prompt":"客户要加排行榜，玩家却开始放弃，收入和社群氛围也变差；帮我判断真正的问题。","expected_behavior":"联合倾听、动机、平衡、社群、商业与责任，但收敛到一个最大风险。"},
-    {"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"请把这段已经确定的按钮文案翻译成英文，不需要讨论游戏设计。","expected_behavior":"不触发大师级游戏设计诊断。"},
-    {"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"帮我评估一家公司的股票估值和管理层质量。","expected_behavior":"不触发，属于投资分析。"},
-    {"id":"edge-01","type":"edge_case","prompt":"这是一个纯艺术、无胜负、允许玩家自由解释的漫步作品，还需要统一主题、平衡和成功指标吗？","expected_behavior":"可以调用，但改写为低强制、多义性的体验目标；不强加传统胜负或单一解释。"}
+    {
+      "id": "core-loop",
+      "type": "should_trigger",
+      "prompt": "核心循环能运行，但没有奖励玩家就不愿重复。请判断最大风险并设计下一次测试。",
+      "expected_behavior": "区分内生价值与外部奖励，给出证据等级、3至5个透镜、失败行为和停止线。"
+    },
+    {
+      "id": "balance",
+      "type": "should_trigger",
+      "prompt": "PVP中一种低风险策略胜率不夸张，却让高水平玩家都不愿尝试其他策略。",
+      "expected_behavior": "检查有意义选择、机会成本、反馈环和策略生态，不只比较平均胜率。"
+    },
+    {
+      "id": "vr",
+      "type": "should_trigger",
+      "prompt": "VR项目很有临场感，但15分钟后多数玩家眩晕；团队想靠更高画质解决。",
+      "expected_behavior": "安全和舒适优先于画质，验证技术独有价值并提供回退、护栏和停止线。"
+    },
+    {
+      "id": "soft-launch",
+      "type": "should_trigger",
+      "prompt": "软启动首日留存好，但第三次会话流失、付费投诉和公会骚扰一起上升。",
+      "expected_behavior": "分离首次与第三次体验，联合经济、社群治理和责任，但仍锁定单一最大风险。"
+    },
+    {
+      "id": "reference",
+      "type": "should_trigger",
+      "prompt": "解释69号兴趣曲线透镜，并告诉我该读哪一章。",
+      "expected_behavior": "使用参考查询模式，定位透镜和章节，不强制执行完整诊断。"
+    },
+    {
+      "id": "non-game",
+      "type": "should_not_trigger",
+      "prompt": "帮我分析一家上市公司的估值和管理层。",
+      "expected_behavior": "不触发游戏设计技能。"
+    }
   ],
-  "minimum_pass_rate": 0.8,
-  "notes": "合并 skill 的冒烟测试：要求单风险收敛，同时覆盖体验、VR、商业社群和非游戏边界。"
+  "minimum_pass_rate": 0.8
 }

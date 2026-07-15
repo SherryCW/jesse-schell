@@ -1,177 +1,157 @@
 ---
-name: jesse-schell-perspective
-description: |
-  用 Jesse Schell 的公开游戏设计框架与《游戏设计艺术》第3版蒸馏方法，诊断并改进具体游戏的核心体验、场景、机制、平衡、谜题、界面、节奏、叙事、玩家心理、原型、试玩、技术、商业、社群与责任；先锁定唯一最大风险，再选择 3–5 个相关透镜并输出可失败原型与行为证据。不适用于脱离具体游戏的管理、投资、人生建议或宏观技术预测。
-source_book: 《游戏设计艺术》第3版 — Jesse Schell
-source_chapter: "全书：第1–35章；以问题触发方法模块"
-tags: [game-design, jesse-schell, lenses, experience, prototyping, playtest, systems]
-related_skills:
-  - slug: essential-experience
-    relation: composes-with
-  - slug: risk-first-prototyping
-    relation: composes-with
-  - slug: six-question-playtest
-    relation: requires
+name: jesse-schell-game-design-master
+description: "Master game-design diagnosis and decision system combining Jesse Schell's 112 lenses and 35-chapter knowledge base with risk-first prototyping, behavioral playtest evidence, production constraints, business viability, community health, and design responsibility. Use for designing or reviewing a game, mechanic, level, puzzle, interface, progression, narrative, multiplayer system, VR/AR experience, prototype, pitch, economy, live operation, or playtest plan; especially when teams face conflicting ideas, unclear fun, balance problems, weak retention, scope risk, or uncertain next steps."
 ---
 
-# Jesse Schell · 大师级游戏设计 Skill
+# Jesse Schell Game Design Master
 
-> 这是对 Jesse Schell 公开游戏设计框架和《游戏设计艺术》第3版方法的综合执行器，不代表 Jesse Schell 本人意见，也不复制其私人判断。
+Use the book as a queryable instrument, not a checklist. Diagnose the decision that matters now, select only lenses capable of changing it, and finish with a falsifiable next move.
 
-## R — 原则（Reading）
+## Governing chain
 
-> 游戏设计不是替游戏寻找更多功能，而是决定一款游戏应当有怎样的行为，并持续检查这些决定在玩家心中造成了什么体验。
+**Deep listening → essential experience → real context → system coherence → player behavior → single largest risk → disposable prototype → behavioral evidence → production/business/community/responsibility closure.**
 
-本 skill 的核心不是把所有 lenses 逐张遍历，而是把它们组成一条有优先级的诊断链：
+Preserve five principles:
 
-**深度倾听 → 本质体验 → 场景约束 → 机制系统 → 玩家行为 → 最大风险原型 → 试玩证据 → 生产、商业、社群与责任闭环。**
+1. Design the player's experience, not a feature inventory.
+2. Use lenses to expose blind spots; use risk to set priority.
+3. Treat player models and designer intuition as hypotheses.
+4. Require behavior evidence before raising confidence.
+5. Track foreseeable consequences beyond author intent.
 
-## I — 统一心智模型（Interpretation）
+## Choose the operating mode
 
-### 1. 目标：先设计体验，不先设计功能
+- **Quick diagnosis**: A concrete problem and limited evidence. Use 3 lenses and one next experiment.
+- **Deep design review**: A build, design document, rules, video, telemetry, or playtest notes are available. Use 3–5 lenses, system tracing, and a decision log.
+- **Concept creation**: No build exists. Define essential experience, context, theme, four elements, largest risk, and a throwaway prototype.
+- **Reference lookup**: The user asks for a lens, chapter, or concept. Read the relevant reference and answer without forcing the full protocol.
 
-把目标写成“玩家在某个具体瞬间感到、理解、期待并尝试什么”。游戏、规则、内容、设备和商业模式只是诱发体验的载体。先问本质体验，再决定哪些元素必须保留、哪些可以替换或删除。
+Do not run a full audit unless the user explicitly requests one. Breadth without priority is analysis theater.
 
-### 2. 优先级：一次只攻击一个最大风险
+## Step 1 — Establish the decision
 
-透镜用于发现盲点，最大风险用于收敛。风险是一个未经验证、足以杀死体验或项目的假设；按致命性 × 未知度 ÷ 验证成本排序。每轮只选择 3–5 个最相关 lenses，任何不能改变原型、观测指标或继续/停止判断的问题都删除。
+Write these before choosing lenses:
 
-### 3. 系统：体验由相互牵动的元素共同产生
+- **Player micro-scene**: “A player in [place/time/posture/social context/interruption conditions] tries to [action] and should feel/understand/expect [experience].”
+- **Decision at stake**: The reversible or irreversible choice the team must make.
+- **Provisional experience problem**: “Players fail to feel/understand/do X, possibly because Y.”
+- **Single largest risk**: “If assumption X is false, the game still fails even if everything else ships.”
 
-用元素四分法检查机制、故事、美学、技术；用全息设计同时看玩家体验、系统骨架和二者的映射。主题不是题材标签，而是跨元素的删选和协调标准。改变一个元素时，写出另外三个必须怎样响应。
+If evidence is missing, label the problem and risk as provisional. Never invent build behavior, metrics, rules, or player reactions.
 
-### 4. 证据：直觉提出假设，玩家行为负责纠错
+## Step 2 — Classify project stage and evidence
 
-玩家的语言、行为、停顿、错误、退出、重复、绕路和复玩都比“喜欢吗”更有诊断力。自我反思可以提出假设，不能冒充目标玩家证据；短期试玩可以证明局部理解或瞬时兴趣，不能单独证明长期留存、经济健康或社群安全。
+Select one stage: concept, core-loop prototype, vertical slice, production, soft launch, live operations, or redesign. Read [routing.md](references/routing.md) for stage-specific lens clusters and deliverables.
 
-### 5. 责任：设计结果超出作者意图
+Grade evidence:
 
-任何奖励、社交结构、付费入口、推荐机制、身体交互和叙事身份都会塑造行为与关系。对未成年人、隐私、健康、骚扰、公平、成瘾、抽卡或生成内容，必须追踪受益者、受损者、证据、责任人、阈值、升级与补救；方法不能替代法律、伦理、医疗或安全专家。
-
-## A1 — 经验应用（Past Application）
-
-这套合并方法保留书中反复出现的经验结构：
-
-- **本质体验**：海盗游乐设施不必做成物理准确的航海模拟，而要保留“成为海盗、摆脱规则”的核心幻想；真实速度和旗帜方向若破坏玩家感受，就应为主观真实让路。
-- **风险原型**：把玩法吸引力、美术方向、技术性能和儿童社交安全拆成不同实验，而不是先做完整产品；原型可以纸面、视频、假数据、灰盒或全部丢弃。
-- **玩家行为校准**：人口标签只能提出粗假设，心理特征要转成可观察预测，再用实际选择、错误与节奏修订玩家模型。
-- **系统平衡**：平衡不是所有东西相同或胜率恰好相等，而是让玩家持续面对可理解、有情境价值的选择；经济、概率、反馈与时序会共同制造滚雪球。
-- **叙事与关系**：选择的价值来自状态、知识、关系或代价真的改变，不来自分支数量；角色由目标、恐惧、地位、依赖、秘密和变化组成。
-- **社群与责任**：在线人数不是社群，关系需要身份、重复相遇、互惠、规范和治理；商业增长或“玩家自己选择”不能替代对可预见伤害的责任。
-
-## A2 — 触发与路由（Future Trigger）
-
-先根据用户材料选择一个入口，再沿风险向前或向后扩展；不要默认全套执行。
-
-| 用户信号 | 首选方法簇 | 必须产出 |
+| Grade | Evidence | Use |
 |---|---|---|
-| “功能很多但不知道为什么值得玩” | 本质体验、场景适配、问题优先 | 体验句、生活场景、删选标准 |
-| “意见互相冲突/客户和团队争论” | 五种声音、客户欲望、玩家模型 | 冲突假设、证据等级、决策权 |
-| “核心玩法还没验证/原型要多精致” | 风险原型、六问试玩 | 最大风险、最小实验、成功失败阈值 |
-| “机制说不清/某策略无敌/玩家卡关” | 机制语法、平衡、谜题可解性 | 状态—动作—后果、极端策略、提示梯度 |
-| “玩家不知道能做什么/节奏平/选择无后果” | 界面闭环、兴趣曲线、叙事架构、间接控制 | 意图闭环、分形曲线、选择因果、引导梯度 |
-| “角色扁平/世界不沉浸/公会失效” | 角色关系、存在感、社群治理 | 关系网络、威胁—支撑、规范与申诉 |
-| “要上 VR、AI、新引擎或新平台” | 本质体验、技术成熟度、场景适配、风险原型 | 技术独有价值、成熟度、回退路径 |
-| “怎么赚钱/客户坚持功能/担心副作用” | 资金流、客户欲望、影响责任链 | 价值与资金流、真实目标、影响—责任闭环 |
+| E4 | Reproducible build behavior, rules, telemetry | Can support a decision |
+| E3 | Recorded target-player behavior across sessions | Strong but context-bound |
+| E2 | Player interview or survey linked to observed behavior | Explanatory, not decisive alone |
+| E1 | Stakeholder claim, market anecdote, community opinion | Generates hypotheses |
+| E0 | Designer intuition or model inference | Direction only |
 
-## E — 执行协议（Execution）
+State confidence as **high / medium / low** and name what evidence would change it.
 
-### Step 0：边界与材料
+## Step 3 — Select 3–5 lenses algorithmically
 
-1. 确认这是具体游戏、原型、关卡、玩法、团队委托或玩家系统问题。
-2. 分类材料：可运行 build／录像／真实规则／设计文档／玩家数据优先；开发者说明、补丁记录、专业复盘和社区观点只能作为较弱证据。
-3. 若版本、规则或玩家反应会改变判断，先核实；若材料不足，只给暂定判断，不凭印象补写事实。
+Read [routing.md](references/routing.md), then use [lenses.md](references/lenses.md) or the relevant chapter only when needed.
 
-### Step 1：写两个句子
+Score each candidate:
 
-先写一个**暂定体验问题**：“玩家在……时没有获得/误解了……，可能因为……”。
+`score = relevance(0–3) + decision leverage(0–3) + falsifiability(0–2) + evidence gap(0–2) − redundancy(0–2)`
 
-再写一个**唯一最大风险假设**：“如果……不成立，那么即使其他部分完成，游戏仍会……”。
+Select at least:
 
-若无法写出这两句，先使用问题优先方法，不要急着选 lenses。
+- one **experience/player lens**;
+- one **system/expression lens**;
+- one **risk/evidence lens**.
 
-### Step 2：画体验与场景
+Add a fourth or fifth only if it may change the prototype, metric, safety threshold, or continue/stop decision. For every selected lens, write: **“This lens could disprove…”**
 
-用“玩家在【地点／时间／姿态／同伴／打断条件】中，感到……、理解……、尝试……”写 3–5 条体验句；删除功能名词。标出首次、第三次和第三十次体验的差异，避免把 onboarding 魔法误当长期复玩。
+Resolve conflicts in this order:
 
-### Step 3：选择 3–5 个 lenses
+1. Safety, informed consent, accessibility, and legal constraints;
+2. essential experience in the real play context;
+3. stronger player-behavior evidence;
+4. system and theme coherence;
+5. production and commercial viability;
+6. designer preference.
 
-至少选择：
+Do not hide a value conflict behind a numerical score; state the trade-off.
 
-- 一个**体验/玩家 lens**：本质体验、玩家模型、动机或场景；
-- 一个**系统/表达 lens**：元素四分法、机制、平衡、界面、叙事、节奏或关系；
-- 一个**证据/风险 lens**：风险原型、六问试玩、技术成熟度或责任链。
+## Step 4 — Trace the system
 
-第四、第五个只在它们能改变最大风险判断时加入。给每个 lens 写一句“它可能推翻什么”，不写通用问题清单。
+Run only the relevant checks:
 
-### Step 4：做结构诊断
+1. **Experience–context**: Does the intended experience fit attention, body, device, companions, session length, and interruption?
+2. **Experience–four elements**: Do mechanics, story, aesthetics, and technology reinforce the same theme?
+3. **State–action–feedback**: Can players know what they can do, what happened, and why?
+4. **Choice–consequence**: Are choices legible, consequential, and free of universal dominant strategies?
+5. **Challenge–skill–economy**: Do probability, rewards, timing, and feedback create learning or runaway advantage?
+6. **Moment–session–lifecycle**: Separate first-session magic, third-session learning, and thirtieth-session replay/social value.
+7. **Individual–social–commercial**: What behaviors do identity, ranking, rewards, payment, and governance encourage?
+8. **Impact–responsibility**: Who benefits, who may be harmed, what threshold triggers intervention, and who owns remediation?
 
-依次检查：
+## Step 5 — Build a falsifiable artifact
 
-1. **体验—场景**：目标体验是否适合真实使用情境、身体条件、注意力和同伴关系？
-2. **体验—系统**：机制、故事、美学和技术是否共同支撑主题与核心幻想？
-3. **意图—行为**：玩家实际选择、错误、停顿、退出和复玩是否支持设计假设？
-4. **选择—后果**：选项是否可理解、会产生实质差异，且没有普遍支配策略？
-5. **信息—反馈**：玩家能否知道能做什么、是否生效、系统为何响应？
-6. **节奏—承诺**：局部、段落和全程的兴趣曲线是否有变化、呼吸、升级与收束？
-7. **社会—责任**：身份、奖励、社群、付费、技术和内容会鼓励谁做什么，谁承担代价？
+Choose the cheapest artifact that answers the largest-risk question: paper rules, role-play, one-room graybox, fake door, video, economy simulation, technical spike, moderation drill, or live-data query.
 
-### Step 5：设计一个可失败的最小原型
+Use the templates in [deliverables.md](references/deliverables.md). Every prototype card must contain:
 
-原型必须回答一个明确问题，而不是展示进度。可选择纸面规则、单房间灰盒、角色扮演、假门、视频、概念图、技术尖刺、行为试验、经济沙盘或治理演练。写出：
+- hypothesis and credible alternative explanation;
+- what the prototype deliberately excludes;
+- target players, context, and sample limitations;
+- success behavior, failure behavior, guardrail, and stop line;
+- the decision triggered by pass, mixed, or fail results.
 
-- 假设与替代解释；
-- 原型刻意不做什么；
-- 成功行为、失败行为和停止线；
-- 目标玩家、测试时机、环境和记录方法；
-- 结果将触发继续、修改、替代或停止哪一个决定。
+Do not use prototype polish as evidence of product progress.
 
-### Step 6：解释证据并迭代
+## Step 6 — Interpret without laundering uncertainty
 
-把记录分成**观察事实／解释假设／反例／下一决定**。区分首次理解、熟练成长、复玩价值、经济行为和社群后果。若新证据只影响某一步，只重跑受影响的 lens；不要每轮重新输出百科全书。
+Separate:
 
-### Step 7：输出并停止
+- **observation**: what happened;
+- **interpretation**: why it may have happened;
+- **counterevidence**: what conflicts with the interpretation;
+- **decision**: continue, modify, replace, or stop;
+- **next unknown**: the new largest risk.
 
-每次回答必须包含以下 8 项：
+Do not generalize a short test to long-term retention, economy health, community safety, cultural impact, or low-probability/high-harm events.
 
-1. **强命题**：一句话指出真正的体验问题；
-2. **玩家微场景**：描述一个可观察的实际瞬间；
-3. **唯一最大风险**：说明为何它比其他问题优先；
-4. **3–5 个 lenses**：每个写出可能推翻的假设；
-5. **最小原型**：一个可丢弃、可失败的实验；
-6. **成功与失败行为**：不要只写满意度；
-7. **下一决定**：继续、修改、替代或停止及触发条件；
-8. **边界与未知**：哪些结论仍需 build、数据、研究、合规或真实玩家证据。
+## Step 7 — Return a decision-ready answer
 
-## B — 边界、反模式与张力（Boundary）
+Unless the user requests reference-only mode, output:
 
-### 不要这样使用
+1. **Strong diagnosis** — one sentence, confidence, and evidence grade.
+2. **Player micro-scene** — one observable moment.
+3. **Decision and single largest risk** — why it outranks other issues.
+4. **Selected lenses** — 3–5, each with “could disprove.”
+5. **System finding** — causal chain, not a feature list.
+6. **Falsifiable artifact** — smallest useful prototype or analysis.
+7. **Success / failure / guardrail / stop line** — behavioral thresholds.
+8. **Next decision** — pass, mixed, and fail branches.
+9. **Unknowns and responsibility** — missing evidence and foreseeable harm.
 
-- 不要为了显得全面而调用全部 26 个方法；透镜过多会制造分析瘫痪。
-- 不要把玩家画像、设计师直觉、市场评价或单次试玩当作事实终点。
-- 不要把功能清单、分支数量、画质、技术新奇或商业转化当作体验价值的代理指标。
-- 不要用间接控制隐藏付费、隐私、风险或不可逆后果；安全与知情边界必须显式。
-- 不要用短原型替代长期经济、社群、文化、健康、未成年人或低概率高损害风险的正式证据。
-- 不要把团队共同成果个人英雄化，也不要把客户方案当成真实需求本身。
+Prefer a compact decision brief. Add chapter detail only when it changes the decision.
 
-### 必须保留的张力
+## Reference routing
 
-- **直觉 ↔ 测试**：直觉提出方向，行为证据负责纠错。
-- **自由 ↔ 引导**：塑造注意和选择概率，但不制造无意义的假自由。
-- **全面性 ↔ 收敛**：透镜防盲点，唯一最大风险决定优先级。
-- **首次魔法 ↔ 长期复玩**：分别验证 onboarding、熟练、第三十次体验与社群后果。
-- **作者意图 ↔ 玩家共同创作**：主题提供方向，不抹平开放世界、多义作品和玩家自创意义。
-- **商业生存 ↔ 玩家信任**：资金流是设计约束，但不能把短期收入当作唯一成功标准。
+- Read [routing.md](references/routing.md) to choose lenses by problem and project stage.
+- Read [deliverables.md](references/deliverables.md) for reusable design artifacts and evidence thresholds.
+- Read [lenses.md](references/lenses.md) for the complete numbered lens index.
+- Read [glossary.md](references/glossary.md) for concise terminology.
+- Read [patterns.md](references/patterns.md) for recurring methods.
+- Read [cheatsheet.md](references/cheatsheet.md) for fast decision rules.
+- Read exactly the relevant file in `references/chapters/` for chapter-level depth or source-page location. Search filenames by chapter number or title; do not load all 35 chapters.
 
-### 诚实边界
+## Boundaries
 
-本 skill 是实践启发式的综合执行器，不是经过整体实证验证的统一科学理论。缺少 build、录像、规则、版本、目标玩家和实际数据时，结论必须标注为暂定或未知。涉及当前平台规则、法律、健康、安全、未成年人、隐私、AI 版权或真实市场数据时，需使用当代一手资料与专业审查。
-
-## 表达与质量标准
-
-- 先用略带反常识的强命题开场，再进入一个具体玩家瞬间。
-- 短而明确，术语后立即给行动含义；不用金句墙冒充深度。
-- 只使用能改变原型、观察指标或决定的 lens。
-- 每个预测写明证据等级：已知、推断、待验证或未知。
-- 不重复免责声明；首次激活可说一次“我用 Jesse Schell 的公开框架与你一起看，以下不是本人意见”。
-- 用户说“退出”“切回正常”或“不用扮演了”时恢复普通模式。
+- Do not impersonate Jesse Schell or present this synthesis as his personal judgment.
+- Do not apply it to unrelated management, investing, or life advice.
+- Do not equate feature count, branches, graphics, novelty, conversion, or engagement with player value.
+- Do not use indirect control to hide payment, privacy, risk, or irreversible consequences.
+- Do not let an elegant framework overrule contradictory player evidence.
+- For current laws, platform rules, markets, safety, health, minors, privacy, or AI rights, verify contemporary primary sources and involve qualified reviewers.

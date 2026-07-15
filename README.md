@@ -1,45 +1,44 @@
-# Jesse Schell · 游戏设计大师 Skill
+# Jesse Schell Game Design Master
 
-一个以 Jesse Schell 公开游戏设计框架和《游戏设计艺术》第 3 版为基础的综合型 Codex/Claude skill。
+一个把 Jesse Schell《游戏设计艺术》第 3 版的 **35 章、112 个编号透镜**，与风险优先原型、行为试玩证据、生产约束、商业闭环、社群治理和设计责任结合起来的 Codex skill。
 
-它把“体验优先、透镜式诊断、风险优先原型、试玩证据”与场景、玩家、机制、平衡、谜题、界面、节奏、叙事、社群、技术、商业和责任模块合并为一条可执行工作流。
+它不是透镜清单，也不模仿 Jesse Schell 本人。它把游戏设计问题压缩成一个当前决策和一个最大风险，选择 3–5 个可能推翻判断的透镜，并交付可失败实验、行为阈值和下一决策。
 
-## 核心工作方式
+## 核心增强
 
-每次只做四件关键事：
+- 按问题和项目阶段路由透镜，而非全量扫描。
+- 使用 E0–E4 证据等级和高/中/低置信度。
+- 区分首次、第三次和第三十次体验。
+- 明确透镜冲突裁决：安全 → 体验 → 证据 → 系统 → 商业 → 偏好。
+- 提供体验简报、风险表、原型卡、试玩证据表、价值—资金—影响图和决策日志。
+- 将 35 章和 112 个透镜放入按需加载的 references，保持主工作流精简。
 
-1. 写出暂定体验问题。
-2. 锁定唯一最大风险假设。
-3. 选择 3–5 个能改变判断的 lenses。
-4. 设计可失败的最小原型，并用可观察行为决定继续、修改、替代或停止。
+## 使用示例
 
-它不会机械调用全部方法，也不会用功能数量、画质、技术新奇或单次“喜欢吗”投票代替体验证据。
-
-## 覆盖范围
-
-- 本质体验、场景适配、五种声音与客户欲望
-- 玩家模型、动机、机制语法、多轴平衡与谜题可解性
-- 界面反馈、兴趣曲线、互动叙事、间接控制与角色关系
-- 临场感、社群治理、协作设计文档与六问试玩
-- 技术成熟度、资金流商业模型与影响责任链
+```text
+Use $jesse-schell-game-design-master to diagnose my game's largest experience risk,
+select the highest-value lenses, and design the next falsifiable prototype.
+```
 
 ## 安装
 
-将 `SKILL.md` 放入个人 skill 目录，并保留目录名 `jesse-schell-perspective`，以继续使用 `$jesse-schell-perspective`：
-
 ```bash
-mkdir -p ~/.codex/skills/jesse-schell-perspective/agents
-cp SKILL.md ~/.codex/skills/jesse-schell-perspective/SKILL.md
-cp agents/openai.yaml ~/.codex/skills/jesse-schell-perspective/agents/openai.yaml
+mkdir -p ~/.codex/skills
+cp -R . ~/.codex/skills/jesse-schell-game-design-master
 ```
 
-## 设计边界
+重启 Codex 会话后使用 `$jesse-schell-game-design-master`。
 
-本 skill 模拟公开方法，不代表 Jesse Schell 本人意见。透镜是实践启发式，不是统一科学理论。缺少 build、录像、规则、版本、目标玩家和行为数据时，结论必须标注为暂定或未知；涉及未成年人、隐私、健康、安全、付费操控和 AI 版权时，需要当代资料与专业审查。
+## 结构
 
-## 文件
+- `SKILL.md`：大师级诊断与决策协议
+- `agents/openai.yaml`：Codex UI 元数据
+- `references/routing.md`：问题与项目阶段路由
+- `references/deliverables.md`：可复用设计交付物
+- `references/lenses.md`：完整透镜索引
+- `references/chapters/`：35 章按需知识库
+- `test-prompts.json`：冒烟测试场景
 
-- `SKILL.md`：主 skill
-- `agents/openai.yaml`：调用接口
-- `test-prompts.json`：冒烟测试
-- `ABOUT.md`：方法来源、合并决策和质量记录
+## 边界
+
+这是公开框架的实践性综合，不代表 Jesse Schell 本人意见。涉及当前法律、平台规则、市场、安全、健康、未成年人、隐私或 AI 权利时，应核实当代一手资料并引入合格审查者。
