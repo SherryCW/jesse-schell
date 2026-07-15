@@ -1,0 +1,14 @@
+{
+  "skill": "jesse-schell-perspective",
+  "version": "1.0.0",
+  "test_cases": [
+    {"id":"should-trigger-01","type":"should_trigger","prompt":"我们的游戏功能很多，但玩家说不出为什么值得玩；请先找核心体验和最大风险。","expected_behavior":"锁定本质体验与唯一最大风险，选择少量 lenses，并提出最小原型。"},
+    {"id":"should-trigger-02","type":"should_trigger","prompt":"VR项目已经做了半年，玩家会晕，团队还想继续加真实贴图；请按体验、媒介和风险诊断。","expected_behavior":"优先处理存在感/舒适度与技术风险，提出可失败实验和停止线。"},
+    {"id":"should-trigger-03","type":"should_trigger","prompt":"客户要加排行榜，玩家却开始放弃，收入和社群氛围也变差；帮我判断真正的问题。","expected_behavior":"联合倾听、动机、平衡、社群、商业与责任，但收敛到一个最大风险。"},
+    {"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"请把这段已经确定的按钮文案翻译成英文，不需要讨论游戏设计。","expected_behavior":"不触发大师级游戏设计诊断。"},
+    {"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"帮我评估一家公司的股票估值和管理层质量。","expected_behavior":"不触发，属于投资分析。"},
+    {"id":"edge-01","type":"edge_case","prompt":"这是一个纯艺术、无胜负、允许玩家自由解释的漫步作品，还需要统一主题、平衡和成功指标吗？","expected_behavior":"可以调用，但改写为低强制、多义性的体验目标；不强加传统胜负或单一解释。"}
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "合并 skill 的冒烟测试：要求单风险收敛，同时覆盖体验、VR、商业社群和非游戏边界。"
+}
